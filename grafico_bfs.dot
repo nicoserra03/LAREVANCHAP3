@@ -1,0 +1,17 @@
+digraph G {
+    rankdir=LR;
+    node [shape=circle];
+    V0 [label="V0\n104663 us"];
+    V1 [label="V1\n116231 us"];
+    V2 [label="V2\n101406 us"];
+    V3 [label="V3\n98598 us"];
+    V4 [label="V4\n93045 us"];
+    V5 [label="V5\n97790 us"];
+    V6 [label="V6\n109441 us"];
+    V7 [label="V7\n92820 us"];
+    V8 [label="V8\n101388 us"];
+    V9 [label="V9\n145710 us"];
+    V10 [label="V10\n109730 us"];
+    V11 [label="V11\n107046 us"];
+    V12 [label="V12\n103222 us"];
+}

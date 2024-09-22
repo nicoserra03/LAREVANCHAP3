@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "libP3LAREVANCHA.a"
+)

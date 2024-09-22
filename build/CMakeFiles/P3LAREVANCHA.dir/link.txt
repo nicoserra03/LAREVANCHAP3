@@ -1,0 +1,2 @@
+/usr/bin/ar qc libP3LAREVANCHA.a CMakeFiles/P3LAREVANCHA.dir/grafo.cpp.o CMakeFiles/P3LAREVANCHA.dir/main.cpp.o
+/usr/bin/ranlib libP3LAREVANCHA.a

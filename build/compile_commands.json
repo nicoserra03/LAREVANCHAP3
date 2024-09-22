@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/ens/home01/n/nicolas.serra/p4gr33_soft/P3Nico/build",
+  "command": "/usr/lib64/ccache/c++   -g -o CMakeFiles/P3.dir/grafo.cpp.o -c /ens/home01/n/nicolas.serra/p4gr33_soft/P3Nico/grafo.cpp",
+  "file": "/ens/home01/n/nicolas.serra/p4gr33_soft/P3Nico/grafo.cpp",
+  "output": "CMakeFiles/P3.dir/grafo.cpp.o"
+},
+{
+  "directory": "/ens/home01/n/nicolas.serra/p4gr33_soft/P3Nico/build",
+  "command": "/usr/lib64/ccache/c++   -g -o CMakeFiles/P3.dir/main.cpp.o -c /ens/home01/n/nicolas.serra/p4gr33_soft/P3Nico/main.cpp",
+  "file": "/ens/home01/n/nicolas.serra/p4gr33_soft/P3Nico/main.cpp",
+  "output": "CMakeFiles/P3.dir/main.cpp.o"
+}
+]

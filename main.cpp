@@ -26,21 +26,21 @@ int main() {
 
 
 
-    grafo.generarDOT("grafo2.dot");
+    grafo.generarDOT("salidas/grafo2.dot");
 
     vector<string> padre = grafo.BFS("A");
        // Medir tiempo de BFS
     long long tiempo = grafo.medirTiempoBFS("A");
     cout << "Tiempo de ejecución de BFS: " << tiempo << " microsegundos" << endl;
-    Grafo arbol = grafo.construirArbolBFSAPartirPadre(padre);
+    Grafo arbol = grafo.construirArbolConPadres(padre);
     
     
-    arbol.generarDOT("arbol2.dot");
+    arbol.generarDOT("salidas/arbol2.dot");
 
     //DFS
     padre = grafo.DFS("A");
-    arbol = grafo.construirArbolBFSAPartirPadre(padre);
-    arbol.generarDOT("arbol2DFS.dot");
+    arbol = grafo.construirArbolConPadres(padre);
+    arbol.generarDOT("salidas/arbol2DFS.dot");
 
 
 
@@ -57,51 +57,61 @@ int main() {
 
     // Generar vértices
     for (int i = 0; i < numVertices; ++i) {
-        vertices.insert("V" + to_string(i));
+        //vertices.insert(to_string(i));
     }
 
-    Grafo g(vertices);
+   // Grafo g(vertices);
 
     // Agregar aristas aleatorias
     for (int i = 0; i < numAristas; ++i) {
         int v1 = rand() % numVertices;
         int v2 = rand() % numVertices;
         if (v1 != v2) { // Evitar bucles
-            g.agregarArista("V" + to_string(v1), "V" + to_string(v2));
+      //      g.agregarArista("V" + to_string(v1), "V" + to_string(v2));
         }
     }
 
     // Medir tiempo de BFS una sola vez
-     tiempo = g.medirTiempoBFS("V0");
-    cout << "Tiempo de ejecución de BFS: " << tiempo << " microsegundos" << endl;
-     // Guardar tiempos en un archivo
-        ofstream archivo("tiempos_bfs_grafo_grande.txt");
-        for (int i = 0; i < 13; ++i) {
-            archivo << "V" << i << " " << g.medirTiempoBFS("V" + to_string(i)) << endl;
-        }
-        archivo.close();
-
-        // Crear archivo DOT
-        ofstream dotFile("grafico_bfs.dot");
-        dotFile << "digraph G {\n";
-        dotFile << "    rankdir=LR;\n"; // Para que el gráfico sea de izquierda a derecha
-        dotFile << "    node [shape=circle];\n";
-
-        //Graficar Tiempo Lineal vertice en funcion de aristas
-        for (int i = 0; i < 13; ++i) {
-            dotFile << "    V" << i << " [label=\"V" << i << "\\n" << g.medirTiempoBFS("V" + to_string(i)) << " us\"];\n";
-        }
-
-
-
-
-        dotFile << "}\n";
-        dotFile.close();
-
-        // Generar imagen PNG usando Graphviz
-        system("dot -Tpng grafico_bfs.dot -o grafico_bfs.png");
+    // tiempo = g.medirTiempoBFS("V0");
+  //  cout << "Tiempo de ejecución de BFS: " << tiempo << " microsegundos" << endl;
     
 
+    vertices.clear();
+    vertices = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"};
+    Grafo g2(vertices);
+    g2.agregarArista("1", "2");
+    g2.agregarArista("1", "3");
+    g2.agregarArista("2", "3"),
+    g2.agregarArista("2", "4");
+    g2.agregarArista("2", "5");
+    g2.agregarArista("3", "7");
+    g2.agregarArista("3", "8");
+    g2.agregarArista("3", "5");
+    g2.agregarArista("4", "5");
+    g2.agregarArista("5", "6");
+    g2.agregarArista("7", "8");
+    g2.agregarArista("9", "10");
+    g2.agregarArista("11", "12");
+    g2.agregarArista("12", "13");
+
+    g2.generarDOT("salidas/grafofig3-2.dot");
+
+
+
+    vector<bool> explored(13, false);
+    padre.clear();
+    
+    padre = vector<string>(13, "");
+    padre = g2.DFSRecursivo("1", explored, padre);
+    
+    Grafo arbolDFSfig3 = g2.construirArbolConPadres(padre);
+    arbolDFSfig3.generarDOT("salidas/arbolDFSfig3-2.dot");
+ 
+
+    padre.clear();
+    vector<string> a = g2.BFS("1");
+    Grafo arbolBFSfig3 = g2.construirArbolConPadres(a);
+    arbolBFSfig3.generarDOT("salidas/arbolBFSfig3-2.dot");
 
 
 

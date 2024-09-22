@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-c++"
+	BuildStamp="20240921-1740-Experimental"
+	Name="pcunix139.fing.edu.uy"
+	Generator="ctest-3.27.7"
+	CompilerName="/usr/lib64/ccache/c++"
+	CompilerVersion="13.2.1"
+	OSName="Linux"
+	Hostname="pcunix139.fing.edu.uy"
+	OSRelease="6.8.10-200.fc39.x86_64"
+	OSVersion="#1 SMP PREEMPT_DYNAMIC Fri May 17 21:20:15 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="158"
+	ProcessorCacheSize="6144"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="8191"
+	TotalPhysicalMemory="15929"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="4000.38"
+	>
+	<Testing>
+		<StartDateTime>Sep 21 19:50 -03</StartDateTime>
+		<StartTestTime>1726959032</StartTestTime>
+		<TestList/>
+		<EndDateTime>Sep 21 19:50 -03</EndDateTime>
+		<EndTestTime>1726959032</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
